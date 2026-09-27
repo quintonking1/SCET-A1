@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Watch List Prototype</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">ESPN</span>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-title">Watch List</span>
+      </div>
+      <p class="byline">Prototype by <strong>Quinton King</strong> &amp; <strong>Rachel Freyman</strong></p>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- ============ SAVED ============ -->
+    <section class="section" aria-labelledby="saved-heading">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" id="saved-heading">Saved</h2>
+          <p class="section-sub"><span id="saved-count">0</span> items in your list</p>
+        </div>
+      </div>
+
+      <div class="chips" id="chips" role="group" aria-label="Filter saved items by sport"></div>
+
+      <ul class="card-grid" id="saved-grid"></ul>
+      <p class="empty" id="saved-empty" hidden>No saved items in this sport yet.</p>
+    </section>
+
+    <!-- ============ RECOMMENDED ============ -->
+    <section class="section" aria-labelledby="rec-heading">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" id="rec-heading">Recommended for you</h2>
+          <p class="section-sub">Based on what you&rsquo;ve already saved</p>
+        </div>
+      </div>
+
+      <ul class="card-grid" id="rec-grid"></ul>
+      <p class="empty" id="rec-empty" hidden>You&rsquo;ve added everything we recommended. Nice list.</p>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
